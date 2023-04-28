@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Register = require('../Models/indexModel')//import mod3l
+const Customer = require('../Models/indexModel')//import mod3l
 
 router.get("/", (req,res)=>{
     res.render("index")
@@ -11,11 +11,11 @@ router.get("/", (req,res)=>{
 
 //create a post route to send data to backend
 //the action name in the form is the one we use in the post route
-router.post('/register', async(req,res)=>{
+router.post('/index', async(req,res)=>{
     try{
-        const register = new Register(req.body);
+        const register = new Customer(req.body);
         await register.save()
-        res.redirect('/students')//redirect to a path, render a file
+        res.redirect('/index')//redirect to a path, render a file
         console.log(req.body)
     }
     catch(err){
