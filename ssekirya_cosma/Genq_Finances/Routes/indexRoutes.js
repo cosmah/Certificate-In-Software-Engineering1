@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const Register = require('../Models/registerModel')//import mod3l
+const Register = require('../Models/indexModel')//import mod3l
 
-router.get("/register", (req,res)=>{
-    res.render("register")
+router.get("/", (req,res)=>{
+    res.render("index")
   })
 
 
