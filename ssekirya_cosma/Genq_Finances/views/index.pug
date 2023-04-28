@@ -57,7 +57,7 @@ center
   h1 GENQ KYC FORM
 center
   .form
-    form(name='registration' action='/index' onsubmit='return validateForm()' method='post')
+    form(name='registration' action='/index' onsubmit='return validateForm()' method='post' class="was-validated")
       .row
         .col
           input(type='text' name='fname' placeholder='First Name' required='')
@@ -68,12 +68,27 @@ center
         .col
           input(type='date' name='dob' placeholder='Date of Birth(DD/MM/YYYY)' required='' style='width: 100%; height: 2.5rem; padding: 0.5rem; box-sizing: border-box;')
         .col
-          input(type='text' name='gender' placeholder='Gender' required='')
+          .input-group
+            select#batteryprice.form-select(type='text' name='gender'  required='')
+                option(value='Default' selected='') Gender
+                option(value='male') Male 
+                option(value='female') Female
       hr
       br
       .row
         .col
-          input(type='text' name='country' placeholder='Country' required='')
+          .input-group
+            select#batteryprice.form-select(type='text' name='country' placeholder='Country' required='')
+                option(value='Default' selected='') Country 
+                option(value='uganda') Uganda
+                option(value='kenya') Kenya
+                option(value='south_sudan') South Sudan
+                option(value='tanzania') Tanzania
+                option(value='rwanda') Rwanda 
+                option(value='burundi') Burundi
+                option(value='drc') Democratic Republic of Congo 
+
+
         .col
           input(type='text' name='state' placeholder='State/District' required='')
       br
@@ -116,7 +131,7 @@ script.
   var birthdate = new Date(dob);
   var diff = today.getTime() - birthdate.getTime();
   var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
-  if (isNaN(birthdate.getTime()) || dob.length !== 10 || dob[4] !== '/' || dob[7] !== '/' || age < 18) {
+  if (isNaN(birthdate.getTime())  age < 18) {
   alert("Please enter a valid date of birth (YY/MM/DD) and ensure that you are at least 18 years old.");
   return false;
   }
