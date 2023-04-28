@@ -13,34 +13,8 @@ using nodemon to auto restart my server, intsalled using `npm install nodemon`
 //   accept both a request and a response which by convention are shortened to req and res.
 //    Note that these are positional arguments so you could call them x and y if you want and
 //  whichever one was first would represent the request object and the second one the response object.*/
-// //app.get('/', (req, res) => { // new
-// //    res.send('Homepage! Hello world.');
-// //  });
-//  /* //route to about page
-//   app.get('/about', (req, res) => { // new
-//     res.send('About page. Nice.');
-//   });*/
-//   //route to home page
-//     // app.get('/', (req, res) => { // new
-//     //   res.sendFile(__dirname + '/index.html');
-//     // });
- 
-// //add router
-// app.use('/', 'router')
-// =========================================================
-// router.get("/", (req,res)=>{
-//   res.render("employees")
-// })
 
-
-// router.get("/about", (req,res)=>{
-//   res.render("about",{title: "Hello",message: "How are you doing"})
-// })
-
-// router.get("/contact", (req,res)=>{
-//   res.render("contact")
-// })
-
+/
 
 
 
