@@ -55,30 +55,33 @@ head
     }
 center
   h1 GENQ KYC FORM
-center
+
   .form
     form(name='registration' action='/index' onsubmit='return validateForm()' method='post' class="was-validated")
+      
       .row
+        h3 Bio Data 
         .col
-          input(type='text' name='fname' placeholder='First Name' required='')
+          input(type='text' class="form-control" name='fname' placeholder='First Name' required='')
         .col
-          input(type='text' name='lname' placeholder='Last Name' required='')
+          input(type='text' class="form-control" name='lname' placeholder='Last Name' required='')
       br
       .row
         .col
-          input(type='date' name='dob' placeholder='Date of Birth(DD/MM/YYYY)' required='' style='width: 100%; height: 2.5rem; padding: 0.5rem; box-sizing: border-box;')
+          input(type='date' class="form-control" name='dob' placeholder='Date of Birth(DD/MM/YYYY)' required='' style='width: 100%; height: 2.5rem; padding: 0.5rem; box-sizing: border-box;')
         .col
           .input-group
-            select#batteryprice.form-select(type='text' name='gender'  required='')
+            select#batteryprice.form-select(type='text' class="form-control" name='gender'  required='')
                 option(value='Default' selected='') Gender
                 option(value='male') Male 
                 option(value='female') Female
+      h3 Location             
       hr
       br
       .row
         .col
           .input-group
-            select#batteryprice.form-select(type='text' name='country' placeholder='Country' required='')
+            select#batteryprice.form-select(type='text' name='country' class="form-control" placeholder='Country' required='')
                 option(value='Default' selected='') Country 
                 option(value='uganda') Uganda
                 option(value='kenya') Kenya
@@ -90,24 +93,25 @@ center
 
 
         .col
-          input(type='text' name='state' placeholder='State/District' required='')
+          input(type='text' class="form-control" name='state' placeholder='State/District' required='')
       br
       .row
         .col
-          input(type='text' name='town' placeholder='Town' required='')
+          input(type='text' class="form-control" name='town' placeholder='Town' required='')
         .col
-          input(type='number' name='zip' placeholder='Zip Code' required='' style='width: 100%; height: 2.5rem; padding: 0.5rem; box-sizing: border-box;')
+          input(type='number' class="form-control" name='zip' placeholder='Zip Code' required='' style='width: 100%; height: 2.5rem; padding: 0.5rem; box-sizing: border-box;')
+      h3 Contact and Address 
       hr
       br
       .row
         .col
-          input(type='text' name='phone1' placeholder='Phone Number 1' required='')
+          input(type='text' class="form-control" name='phone1' placeholder='Phone Number 1' required='')
         .col
-          input(type='text' name='phone2' placeholder='Phone Number 2' required='')
+          input(type='text' class="form-control" name='phone2' placeholder='Phone Number 2' required='')
       br
       .row
         .col
-          input(type='text' name='email' placeholder='Email' required='')
+          input(type='text' class="form-control" name='email' placeholder='Email' required='')
         .col
       br
       input(type='submit' value='Submit')
